@@ -4,7 +4,10 @@
   "description": "buy and sell stocks based on twitter users' advice",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js",
+    "setup": "source env",
+    "dev-start": "source env && node index.js"
   },
   "repository": {
     "type": "git",
@@ -22,6 +25,7 @@
   "homepage": "https://github.com/matsons/twitterbuysell#readme",
   "dependencies": {
     "express": "^4.15.0",
+    "pg": "^6.1.2",
     "react": "^15.4.2",
     "socket.io": "^1.7.3",
     "twitter": "^1.7.0"
