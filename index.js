@@ -6,14 +6,13 @@ const twitter = require('twitter');
 const config = require('./config');
 
 // app instance, port
-let app = express();
-let port = process.env.port || 8080;
+// let app = express();
+// let port = process.env.port || 8080;
 
 // no cache validation plz
-app.disable('etag');
+// app.disable('etag');
 
-var client = new twitter(config.twitter);
-console.log(config.twitter)
+let client = new twitter(config.twitter);
 
 let stream = client.stream('statuses/filter', {track: 'maga'}, function(stream) {
   stream.on('data', function(event) {
